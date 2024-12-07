@@ -45,7 +45,6 @@ public class RequestBodyJsonController {
         log.info("messageBody={}", messageBody);
         HelloData helloData = objectMapper.readValue(messageBody, HelloData.class);
         log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());
-
         return "ok";
     }
 
